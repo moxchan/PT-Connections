@@ -4,11 +4,12 @@ import { Title } from "@/components/atoms/Title";
 import { StopList } from "@/components/molecules";
 
 const Home = () => {
-  const stops = Array.from({ length: 5 }).map(() => ({
-    type: PTType.Bus,
+  const stops = Array.from({ length: 5 }).map((_, i) => ({
+    id: i,
+    type: Object.values(PTType)[(i % 3) + 3] as PTType,
     title: "Elizabeth St / Lonsdale St",
-    subtitle: "Toward Airport",
-    times: ["1:00", "2:00"],
+    direction: "Toward Airport",
+    departures: ["1:00", "2:00"],
   }));
   return (
     <>

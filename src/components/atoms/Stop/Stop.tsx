@@ -8,11 +8,11 @@ import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 export type StopProps = {
   type: PTType;
   title: string;
-  subtitle: string;
-  times: string[];
+  direction: string;
+  departures: string[];
 };
 
-const Stop = ({ type, title, subtitle, times }: StopProps) => {
+const Stop = ({ type, title, direction, departures }: StopProps) => {
   const { classes } = useStyles();
   return (
     <Container className={classes.stopContainer}>
@@ -22,10 +22,10 @@ const Stop = ({ type, title, subtitle, times }: StopProps) => {
       </Container>
       <Container className={classes.stopInfoContainer}>
         <Text className={classes.stopTitle}>{title}</Text>
-        <Text className={classes.stopSubtitle}>{subtitle}</Text>
+        <Text className={classes.stopSubtitle}>{direction}</Text>
       </Container>
       <Container className={classes.timesContainer}>
-        <Text className={classes.timeText}>{times.join(" ")}</Text>
+        <Text className={classes.timeText}>{departures.join(" ")}</Text>
       </Container>
 
       <IconChevronRight className={classes.arrow} size={pixelToVw(48)} />
