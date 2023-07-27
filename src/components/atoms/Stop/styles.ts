@@ -49,5 +49,6 @@ export const useStyles = createStyles(() => ({
   arrow: {
     alignSelf: "center",
     cursor: "pointer",
+    margin: pixelToVw(8),
   },
 }));

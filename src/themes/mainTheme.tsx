@@ -10,7 +10,6 @@ const MainTheme: MantineThemeOverride = {
     body: {
       backgroundColor: "#f5f5f5",
     },
-
     colorScheme: "light",
 
     fontFamily: nexa.style.fontFamily,

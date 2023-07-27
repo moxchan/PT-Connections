@@ -1,22 +1,17 @@
-import { PTType } from "@/@types";
-
-import { Title } from "@/components/atoms/Title";
-import { StopList } from "@/components/molecules";
+import { Connections } from "@/components/organisms/Connections";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+import Loading from "@/components/atoms/Loading/Loading";
 
 const Home = () => {
-  const stops = Array.from({ length: 5 }).map((_, i) => ({
-    id: i,
-    type: Object.values(PTType)[(i % 3) + 3] as PTType,
-    title: "Elizabeth St / Lonsdale St",
-    direction: "Toward Airport",
-    departures: ["1:00", "2:00"],
-  }));
-  return (
-    <>
-      <Title text="Your Connections" />
-      <StopList stops={stops} />
-    </>
-  );
+  const router = useRouter();
+  useEffect(() => {
+    const redirectPage = async () => {
+      await router.push("/connections");
+    };
+    redirectPage();
+  }, []);
+  return <Loading />;
 };
 
 export default Home;
