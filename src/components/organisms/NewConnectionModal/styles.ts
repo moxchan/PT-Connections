@@ -9,4 +9,11 @@ export const useStyles = createStyles((theme) => ({
   modalItem: {
     padding: pixelToVw(10),
   },
+  saveButton: {
+    margin: pixelToVw(10),
+    background: "#646464",
+    ":hover": {
+      background: "#323232",
+    },
+  },
 }));
