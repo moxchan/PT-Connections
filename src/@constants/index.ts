@@ -1,2 +1,2 @@
-export { default as dataset } from "./dataset";
+export { default as DataSet } from "./dataset";
 export * from "./connections";
