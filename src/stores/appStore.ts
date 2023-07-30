@@ -1,3 +1,4 @@
+import { connections } from "@/@constants";
 import { Connection } from "@/@types";
 import { create } from "zustand";
 
@@ -9,7 +10,7 @@ interface AppState {
 }
 
 const useAppStore = create<AppState>((set) => ({
-  connections: [],
+  connections: connections,
   selectedConnection: "",
   setConnections: (connections: Connection[]) =>
     set((state) => ({

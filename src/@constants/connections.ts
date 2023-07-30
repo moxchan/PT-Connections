@@ -1,6 +1,8 @@
-export const connections = [
+import { Connection } from "@/@types";
+
+export const connections: Connection[] = [
   {
     title: "Home Commute",
-    stops: [0, 1, 2],
+    stops: ["2273", "1071"],
   },
 ];
