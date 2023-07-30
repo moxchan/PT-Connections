@@ -1,7 +1,7 @@
 export enum PTType {
-  Bus,
-  Tram,
-  Train,
+  Bus = "bus",
+  Tram = "tram",
+  Train = "train",
 }
 
 export interface Connection {
