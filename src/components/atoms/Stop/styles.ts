@@ -5,7 +5,7 @@ export const useStyles = createStyles(() => ({
   stopContainer: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "flex-start",
 
     border: "1px solid #646464",
     borderRadius: pixelToVw(16),
@@ -14,7 +14,7 @@ export const useStyles = createStyles(() => ({
     margin: pixelToVw(8),
   },
   iconContainer: {
-    width: pixelToVw(128),
+    width: "10%",
     height: pixelToVw(64),
   },
   icon: {
@@ -25,6 +25,7 @@ export const useStyles = createStyles(() => ({
   stopInfoContainer: {
     display: "flex",
     flexDirection: "column",
+    width: "70%",
   },
 
   stopTitle: {
@@ -40,6 +41,7 @@ export const useStyles = createStyles(() => ({
   timesContainer: {
     display: "flex",
     alignItems: "center",
+    width: "30%",
   },
 
   timeText: {
