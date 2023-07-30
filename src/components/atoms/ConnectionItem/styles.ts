@@ -8,6 +8,7 @@ export const useStyles = createStyles(() => ({
 
     border: "1px solid #646464",
     borderRadius: pixelToVw(16),
+    marginBottom: pixelToVw(16),
   },
   connectionContainer: {
     display: "flex",

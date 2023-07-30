@@ -2,7 +2,7 @@ import { Container } from "@mantine/core";
 import { useStyles } from "./styles";
 import { Stop, StopProps } from "@/components/atoms";
 
-type StopListProps = {
+export type StopListProps = {
   stops: StopProps[];
 };
 
