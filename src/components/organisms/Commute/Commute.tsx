@@ -17,6 +17,12 @@ const Commute = ({ title, stops }: CommuteProps) => {
         return dep.stop_id === stop.id;
       });
 
+      const sampleDirection = departures[0];
+
+      const direction = DataSet.routes.filter(
+        (route) => route.id === sampleDirection.route_id
+      )[0].title;
+
       return {
         id: stop.id,
         type: capitalise(stop.mode) as PTType,
@@ -27,7 +33,7 @@ const Commute = ({ title, stops }: CommuteProps) => {
             minute: "2-digit",
           })
         ),
-        direction: "",
+        direction: `toward ${direction}`,
       } as unknown as StopProps;
     });
 
