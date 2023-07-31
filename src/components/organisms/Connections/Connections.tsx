@@ -12,8 +12,6 @@ const Connections = ({}: ConnectionsProps) => {
   const { classes } = useStyles();
   const { connections } = useAppStore();
 
-  console.log(connections);
-
   const [opened, { open, close }] = useDisclosure(false);
 
   const handleAddNewOnClick = () => {

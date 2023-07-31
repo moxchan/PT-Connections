@@ -17,23 +17,18 @@ const Commute = ({ title, stops }: CommuteProps) => {
         return dep.stop_id === stop.id;
       });
 
-      const sampleDirection = departures[0];
+      const sampleDirection = departures[0].direction;
 
-      const direction = DataSet.routes.filter(
-        (route) => route.id === sampleDirection.route_id
-      )[0].title;
+      const finalDepartures = departures.filter(
+        (dep) => dep.direction === sampleDirection
+      );
 
       return {
         id: stop.id,
         type: capitalise(stop.mode) as PTType,
         title: stop.title,
-        departures: departures.map((d) =>
-          new Date(d.departure_time_utc).toLocaleTimeString("en-us", {
-            hour: "2-digit",
-            minute: "2-digit",
-          })
-        ),
-        direction: `toward ${direction}`,
+        departures: finalDepartures,
+        direction: sampleDirection,
       } as unknown as StopProps;
     });
 

@@ -112,7 +112,6 @@ const NewConnectionModal = ({ opened, onClose, title }: NCMProps) => {
               const currStops = stops;
               currStops[i] = value ?? "";
               setStops(currStops);
-              console.log(stops);
             }}
             data={stopData}
             dropdownPosition="bottom"
