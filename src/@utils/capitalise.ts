@@ -1,3 +1,5 @@
+// Per Word Capitalisation given an input string.
+
 export const capitalise = (s: string): string =>
   s
     .split(" ")

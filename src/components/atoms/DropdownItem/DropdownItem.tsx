@@ -9,6 +9,7 @@ interface DropdownItemProps extends React.ComponentPropsWithoutRef<"div"> {
   description: string;
 }
 
+// ForwardRef is necessary to continue working
 // eslint-disable-next-line react/display-name
 const DropdownItem = forwardRef<HTMLDivElement, DropdownItemProps>(
   ({ image, label, description, ...others }: DropdownItemProps, ref) => {
