@@ -10,6 +10,7 @@ interface CommuteProps extends Connection {}
 const Commute = ({ title, stops }: CommuteProps) => {
   const { classes } = useStyles();
 
+  // Shape the raw data into a form that is useful for StopList
   const stopData = DataSet.stops
     .filter((stop) => stops.includes(stop.id))
     .map((stop) => {
@@ -29,7 +30,7 @@ const Commute = ({ title, stops }: CommuteProps) => {
         title: stop.title,
         departures: finalDepartures,
         direction: sampleDirection,
-      } as unknown as StopProps;
+      } as StopProps;
     });
 
   return (

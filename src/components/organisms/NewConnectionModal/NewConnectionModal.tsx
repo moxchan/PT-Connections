@@ -79,7 +79,7 @@ const NewConnectionModal = ({ opened, onClose, title }: NCMProps) => {
   };
 
   const stopData: DropdownProp[] = DataSet.stops.map((stop) => ({
-    image: ptTypeToIcon(PTType[capitalise(stop.mode) as PTType]),
+    image: ptTypeToIcon(capitalise(stop.mode) as PTType), //
     label: stop.title,
     value: stop.id,
     description: capitalise(stop.mode) as PTType,

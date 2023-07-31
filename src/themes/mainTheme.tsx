@@ -12,6 +12,8 @@ const MainTheme: MantineThemeOverride = {
     },
     colorScheme: "light",
 
+    // we can define the product's colour theme here, I just kept it simple for now
+
     fontFamily: nexa.style.fontFamily,
   }),
 };
