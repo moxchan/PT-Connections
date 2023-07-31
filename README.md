@@ -2,7 +2,7 @@ This is my quick take on the requirements for PTV Connections.
 
 It has rudimentary functionality and faked data, but the project should be scalable with the current architecture.
 
-## Sterting it up
+## Starting it up
 
 First, run the development server:
 
