@@ -1,4 +1,12 @@
-const DataSet = {
+import { DepartureData, RouteData, StopData } from "@/@types";
+
+export interface DataSetType {
+  stops: StopData[];
+  routes: RouteData[];
+  departures: DepartureData[];
+}
+
+const DataSet: DataSetType = {
   stops: [
     {
       id: "2273",
@@ -75,6 +83,12 @@ const DataSet = {
       route_id: "16",
       direction: "15",
       departure_time_utc: "2019-03-21T02:21:00Z",
+    },
+    {
+      stop_id: "1071",
+      route_id: "16",
+      direction: "14",
+      departure_time_utc: "2019-03-21T02:23:00Z",
     },
     {
       stop_id: "31845",

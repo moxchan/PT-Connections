@@ -11,7 +11,15 @@ const Connection = ({}: ConnectionProps) => {
     (connection) => connection.title === selectedConnection
   );
 
+  const handleRoute = async () => {
+    await router.push("/");
+  };
+
   const commuteProps = conectionData[0];
+
+  if (!commuteProps) {
+    handleRoute();
+  }
 
   return commuteProps && <Commute {...commuteProps} />;
 };
